@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+  <head>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://cdn.tailwindcss.com"></script>
+     <meta name="Seb" content="Clone"/>
+     <title>Netflix</title>
+     <meta name="Netflix" content="Reproduction de Netflix">
+     <script src="https://kit.fontawesome.com/af952fda5f.js" crossorigin="anonymous"></script>
+     <link rel="icon" type="image/x-icon" href="data:image/png;base64,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">
+ </head>
+   <body class=" bg-black">     
+      <header class="">
+        <nav class="">
+          <div class=" bg-gradient-to-b from-black fixed top-0 w-full">
+            <span class="flex lg:hidden justify-center">
+              <img class ="flex w-32 ml-3 content-center" src="https://logos-marques.com/wp-content/uploads/2021/03/Netflix-logo.png">
+            </span>
+          <div class="flex justify-between ">
+            <div class="flex justify-start space-x-6 space-y-6">
+              <span class="">
+                  <img class =" w-32 ml-3 flex hidden lg:flex " src="https://logos-marques.com/wp-content/uploads/2021/03/Netflix-logo.png">
+                </span>
+                <div class="text-white font-sans font-medium space-x-8 hidden lg:flex " >
+                <a class="hover:text-red-500 ease-in duration-200" href="#">Home</a>
+                <a class="hover:text-red-500 ease-in duration-200"  href="#">TV Shows</a>
+                <a class="hover:text-red-500 ease-in duration-200"  href="#">Movies</a>
+                <a class="hover:text-red-500 ease-in duration-200"  href="#">New & Popular</a>
+                <a class="hover:text-red-500 ease-in duration-200"  href="#">My List</a>
+                <a class="hover:text-red-500 ease-in duration-200"  href="#">Watch Again</a>
+                </div>
+            </div>  
+            <div class="  flex justify-end text-white space-x-6  hidden lg:flex hover:cursor-pointer mr-5 mt-3 items-center">                    
+                  <button type="button" class="">
+                    <i class="fas fa-search hover:text-red-500 ease-in duration-200"></i>
+                  </button>
+                  <button type="button">
+                    <i class="fas fa-gift hover:text-red-500 ease-in duration-200"></i>
+                  </button>
+                  <button type="button">
+                    <i class="fas fa-bell hover:text-red-500 ease-in duration-200"></i>
+                  </button>
+                  <img src="https://ih0.redbubble.net/image.618363037.0853/flat,1000x1000,075,f.u2.jpg" class="w-6 rounded">
+                  <i class="fas fa-chevron-down hover:text-red-500 ease-in duration-200"></i>                     
+              </div>   
+            </div> 
+          </div> 
+          <section class="h-screen">
+            <div>        
+                <img src="https://images3.alphacoders.com/882/thumb-1920-882548.jpg" alt="Stranger Things" class="w-full h-screen object-cover"/>  
+                <div class="absolute top-40 px-16">        
+                    <div class="flex flex-col xl:w-5/12 lg:w-6/12 md:w-8/12 sm:w-8/12 space-y-2 py-12">
+                        <img src="https://occ-0-1723-1722.1.nflxso.net/dnm/api/v6/tx1O544a9T7n8Z_G12qaboulQQE/AAAABQlRW5blHYq9DgOD32fbjgyPCmUTmSz9qQVRBtSy-Y6T-_BWMXAKrrWonKKkIdPO7BfxuY8O_nrzYjgmbsPqE2tRlU0_ungQZp5wKxDH95sOHlgYXEy19QKjejpgNlexeEQbLw_pDNd1rAzuEpv-ejyreke8088X4Xqc4L6EY3yRJg.png?r=556" alt="Peaky Blinders"/>
+                        <p class="text-white text-lg text-justify">When a young boy goes missing, a small town uncovers a mysterious case, secret experiments, terrifying supernatural forces...and a little girl.</p>        
+                        <div class="flex flex-row w-full space-x-4">
+                            <button class="text-white bg-gradient-to-r from-red-600 to-blue-900 hover:from-pink-500 hover:to-yellow-500 hover:to-yellow-500  flex justify-center items-center bg-white hover:bg-opacity-80 rounded-lg shadow-md space-x-2 px-8 py-2 mt-5">
+                                <i class="fas fa-play"></i>
+                                <span class="text-white font-semibold">Play</span>        
+                            </button>
+                            <button class="flex justify-center items-center bg-gray-800 bg-opacity-80 hover:bg-opacity-60 rounded-lg shadow-md space-x-2 px-8 py-2 mt-5">
+                              <i class="fas fa-info text-white "></i>                           
+                                <span class="text-white font-semibold">Info</span>
+                            </button>
+                        </div>
+          
+                    </div>
+          
+                </div>
+          
+            </div>
+          
+            <div class="absolute bottom-0 bg-gradient-to-t from-black w-full h-40"></div>
+          
+          
+          </section>
+    
+
+        </nav>   
+      </header>
+      <main class="">
+        <section class="">
+          <p class="text-white font-bold text-xl ml-28 mb-4">My List</p>
+          <div class="flex space-x-8 overflow-x-hidden overflow-x-scroll ">
+            <div>
+              <div class="w-80 ml-28 ">
+                <a><img src="assets/Images/NetflixSérie1.PNG" class="rounded w-80"></a>
+              </div>  
+            </div>
+            <div>
+              <div class="w-80">
+                <a><img src="assets/Images/NetflixSérie2.PNG" class="rounded w-80"></a>
+              </div>  
+            </div>
+            <div>
+              <div class="w-80">
+                <a><img src="assets/Images/NetflixSérie3.PNG" class="rounded w-80"></a>
+              </div>  
+            </div>
+            <div>
+              <div class="w-80">
+                <a><img src="assets/Images/NetflixSérie4.PNG" class="rounded w-80"></a>
+              </div>  
+            </div>
+            <div>
+              <div class="w-80">
+                <a><img src="assets/Images/NetflixSérie5.PNG" class="rounded w-80"></a>
+              </div>  
+            </div>
+            <div>
+              <div class="w-80">
+                <a><img src="assets/Images/NetflixSérie5.PNG" class="rounded w-80"></a>
+              </div>  
+            </div>
+            <div>
+              <div class="w-80">
+                <a><img src="assets/Images/NetflixSérie5.PNG" class="rounded w-80"></a>
+              </div>  
+            </div>
+          </div>  
+        </section>
+        <section class="">
+          <p class="text-white font-bold text-xl ml-28 mb-4">Tv Shows</p>
+          <div class="flex space-x-8 overflow-x-scroll">
+            <div>
+              <div class="w-80 ml-28 ">
+                <a><img src="assets/Images/NetflixSérie6.PNG" class="rounded w-80"></a>
+              </div>  
+            </div>
+            <div>
+              <div class="w-80">
+                <a><img src="assets/Images/NetflixSérie7.PNG" class="rounded w-80"></a>
+              </div>  
+            </div>
+            <div>
+              <div class="w-80">
+                <a><img src="assets/Images/NetflixSérie8.PNG" class="rounded w-80"></a>
+              </div>  
+            </div>
+            <div>
+              <div class="w-80">
+                <a><img src="assets/Images/NetflixSérie9.PNG" class="rounded w-80"></a>
+              </div>  
+            </div>
+            <div>
+              <div class="w-80">
+                <a><img src="assets/Images/NetflixSérie10.PNG" class="rounded w-80"></a>
+              </div>  
+            </div>
+            <div>
+              <div class="w-80">
+                <a><img src="assets/Images/NetflixSérie10.PNG" class="rounded w-80"></a>
+              </div>  
+            </div>
+            <div>
+              <div class="w-80">
+                <a><img src="assets/Images/NetflixSérie10.PNG" class="rounded w-80"></a>
+              </div>  
+            </div>
+          </div>  
+        </section>
+        <section class="">
+          <p class="text-white font-bold text-xl ml-28 mb-4">Trending Now</p>
+          <div class="flex space-x-8 overflow-x-scroll">
+            <div>
+              <div class="w-80 ml-28 ">
+                <a><img src="assets/Images/NetflixSérie11.PNG" class="rounded w-80"></a>
+              </div>  
+            </div>
+            <div>
+              <div class="w-80">
+                <a><img src="assets/Images/NetflixSérie12.PNG" class="rounded w-80"></a>
+              </div>  
+            </div>
+            <div>
+              <div class="w-80">
+                <a><img src="assets/Images/NetflixSérie13.PNG" class="rounded w-80"></a>
+              </div>  
+            </div>
+            <div>
+              <div class="w-80">
+                <a><img src="assets/Images/NetflixSérie14.PNG" class="rounded w-80"></a>
+              </div>  
+            </div>
+            <div>
+              <div class="w-80">
+                <a><img src="assets/Images/NetflixSérie15.PNG" class="rounded w-80"></a>
+              </div>  
+            </div>
+            <div>
+              <div class="w-80">
+                <a><img src="assets/Images/NetflixSérie15.PNG" class="rounded w-80"></a>
+              </div>  
+            </div>
+            <div>
+              <div class="w-80">
+                <a><img src="assets/Images/NetflixSérie15.PNG" class="rounded w-80"></a>
+              </div>  
+            </div>
+          </div>  
+        </section>
+        <section class="">
+          <p class="text-white font-bold text-xl ml-28 mb-4">Netflix Originals</p>
+          <div class="flex space-x-8 overflow-x-scroll">
+            <div>
+              <div class="w-80 ml-28 ">
+                <a><img src="assets/Images/NetflixSérie21.PNG" class="rounded w-80"></a>
+              </div>  
+            </div>
+            <div>
+              <div class="w-80">
+                <a><img src="assets/Images/NetflixSérie22.PNG" class="rounded w-80"></a>
+              </div>  
+            </div>
+            <div>
+              <div class="w-80">
+                <a><img src="assets/Images/NetflixSérie23.PNG" class="rounded w-80"></a>
+              </div>  
+            </div>
+            <div>
+              <div class="w-80">
+                <a><img src="assets/Images/NetflixSérie24.PNG" class="rounded w-80"></a>
+              </div>  
+            </div>
+            <div>
+              <div class="w-80">
+                <a><img src="assets/Images/NetflixSérie25.PNG" class="rounded w-80"></a>
+              </div>  
+            </div>
+            <div>
+              <div class="w-80">
+                <a><img src="assets/Images/NetflixSérie25.PNG" class="rounded w-80"></a>
+              </div>  
+            </div>
+            <div>
+              <div class="w-80">
+                <a><img src="assets/Images/NetflixSérie25.PNG" class="rounded w-80"></a>
+              </div>  
+            </div>
+          </div>                
+        </section>
+          <section class="">
+          <p class="text-white font-bold text-xl ml-28 mb-4">Top 10 Aujoud'hui en France</p>
+          <div class="flex space-x-8 overflow-x-scroll">
+            <div class="flex flex-nowrap  ml-16">
+              <a><img src="assets/Images/NombreTop10/thumbnails_top_1.png" class=""></a>
+              <div class="w-60 ">
+                <a><img src="assets/Images/NombreTop10/Netflixtop1.PNG" class="rounded w-60"></a>
+              </div>  
+            </div>
+            <div class="flex flex-nowrap  ml-28">
+              <a><img src="assets/Images/NombreTop10/thumbnails_top_2.png" class=""></a>
+              <div class="w-60 ">
+                <a><img src="assets/Images/NombreTop10/Netflixtop2.PNG" class="rounded w-60"></a>
+              </div>  
+            </div>
+            <div class="flex flex-nowrap  ml-28">
+              <a><img src="assets/Images/NombreTop10/thumbnails_top_3.png" class=""></a>
+              <div class="w-60 ">
+                <a><img src="assets/Images/NombreTop10/Netflixtop3.PNG" class="rounded w-60"></a>
+              </div>  
+            </div>
+            <div class="flex flex-nowrap  ml-28">
+              <a><img src="assets/Images/NombreTop10/thumbnails_top_4.png" class=""></a>
+              <div class="w-60 ">
+                <a><img src="assets/Images/NombreTop10/Netflixtop1.PNG" class="rounded w-60"></a>
+              </div>  
+            </div>
+            <div class="flex flex-nowrap  ml-28">
+              <a><img src="assets/Images/NombreTop10/thumbnails_top_5.png" class=""></a>
+              <div class="w-60 ">
+                <a><img src="assets/Images/NombreTop10/Netflixtop1.PNG" class="rounded w-60"></a>
+              </div>  
+            </div>
+            <div class="flex flex-nowrap  ml-28">
+              <a><img src="assets/Images/NombreTop10/thumbnails_top_6.png" class=""></a>
+              <div class="w-60 ">
+                <a><img src="assets/Images/NombreTop10/Netflixtop1.PNG" class="rounded w-60"></a>
+              </div>  
+            </div>
+            <div class="flex flex-nowrap  ml-28">
+              <a><img src="assets/Images/NombreTop10/thumbnails_top_7.png" class=""></a>
+              <div class="w-60 ">
+                <a><img src="assets/Images/NombreTop10/Netflixtop1.PNG" class="rounded w-60"></a>
+              </div>  
+            </div>
+            <div class="flex flex-nowrap  ml-28">
+              <a><img src="assets/Images/NombreTop10/thumbnails_top_8.png" class=""></a>
+              <div class="w-60 ">
+                <a><img src="assets/Images/NombreTop10/Netflixtop1.PNG" class="rounded w-60"></a>
+              </div>  
+            </div>
+            <div class="flex flex-nowrap  ml-28">
+              <a><img src="assets/Images/NombreTop10/thumbnails_top_9.png" class=""></a>
+              <div class="w-60 ">
+                <a><img src="assets/Images/NombreTop10/Netflixtop1.PNG" class="rounded w-60"></a>
+              </div>  
+            </div>
+            <div class="flex flex-nowrap  ml-28">
+              <a><img src="assets/Images/NombreTop10/thumbnails_top_10.png" class=""></a>
+              <div class="w-60 ">
+                <a><img src="assets/Images/NombreTop10/Netflixtop1.PNG" class="rounded w-60"></a>
+              </div>  
+            </div>
+        </section>      
+      </main>
+ </body>     
+</html>
+
+<!-- Le overflow-x-hidden ne semble pas vouloir fonctionner.-->
+
+
